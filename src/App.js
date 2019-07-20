@@ -2,7 +2,7 @@ import React from 'react';
 import './css/main.css';
 import ShopItemClass from './components/ShopItemClass';
 
-function App() {
+export default function App() {
   const item = {
     brand: 'Tiger of Sweden',
     title: 'Leonard coat',
@@ -15,5 +15,3 @@ function App() {
 
   return <ShopItemClass item={item} />;
 }
-
-export default App;

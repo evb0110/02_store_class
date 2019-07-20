@@ -23,7 +23,10 @@ export default class ShopItemClass extends Component {
         </div>
         <div class="divider" />
         <div class="purchase-info">
-          <div class="price">{this.currency}{this.price.toFixed(2)}</div>
+          <div class="price">
+            {this.currency}
+            {this.price.toFixed(2)}
+          </div>
           <button>Добавить в корзину</button>
         </div>
       </div>

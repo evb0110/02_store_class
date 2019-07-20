@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class ShopItemClass extends Component {
   constructor(props) {
@@ -13,17 +14,17 @@ export default class ShopItemClass extends Component {
 
   render() {
     return (
-      <div class="main-content">
+      <div className="main-content">
         <h2>{this.brand}</h2>
         <h1>{this.title}</h1>
         <h3>{this.description}</h3>
-        <div class="description">{this.descriptionFull}</div>
-        <div class="highlight-window mobile">
-          <div class="highlight-overlay" />
+        <div className="description">{this.descriptionFull}</div>
+        <div className="highlight-window mobile">
+          <div className="highlight-overlay" />
         </div>
-        <div class="divider" />
-        <div class="purchase-info">
-          <div class="price">
+        <div className="divider" />
+        <div className="purchase-info">
+          <div className="price">
             {this.currency}
             {this.price.toFixed(2)}
           </div>
@@ -33,3 +34,14 @@ export default class ShopItemClass extends Component {
     );
   }
 }
+
+ShopItemClass.propTypes = {
+  item: PropTypes.exact({
+    brand: PropTypes.string,
+    title: PropTypes.string,
+    description: PropTypes.string,
+    descriptionFull: PropTypes.string,
+    price: PropTypes.number,
+    currency: PropTypes.string,
+  }).isRequired,
+};

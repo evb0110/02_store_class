@@ -13,5 +13,15 @@ export default function App() {
     currency: '£',
   };
 
-  return <ShopItemClass item={item} />;
+  return (
+    <div className="container">
+      <div className="background-element" />
+      <div className="highlight-window">
+        <div className="highlight-overlay" />
+      </div>
+      <div className="window">
+        <ShopItemClass item={item} />;
+      </div>
+    </div>
+  );
 }
